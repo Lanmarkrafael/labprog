@@ -53,14 +53,14 @@ public class PedraPapelTesoura {
             String jogadorInput = inputScanner.nextLine();
             jogadorInput = jogadorInput.toUpperCase();
             char firstLetter = jogadorInput.charAt(0);
-            if (firstLetter == 'P' || firstLetter == 'A' || firstLetter == 'T') {
+            if (firstLetter == '1' || firstLetter == '2' || firstLetter == '3') {
                 // User has entered a valid input
                 switch (firstLetter) {
-                    case 'P':
+                    case '1':
                         return Move.PEDRA;
-                    case 'A':
+                    case '2':
                         return Move.PAPEL;
-                    case 'T':
+                    case '3':
                         return Move.TESOURA;
                 }
             }
