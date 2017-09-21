@@ -10,8 +10,8 @@ import java.util.Scanner;
 public class PedraPapelTesoura {
 
     
-    private Jogador jogador;
-    private JogadorPC jogadorpc;
+    private final Jogador jogador;
+    private final JogadorPC jogadorpc;
     private int placarJogador;
     private int placarPC;
     private int numDePartidas;
@@ -40,7 +40,7 @@ public class PedraPapelTesoura {
 
     private class Jogador {
 
-        private Scanner inputScanner;
+        private final Scanner inputScanner;
 
         public Jogador() {
             inputScanner = new Scanner(System.in);
@@ -142,33 +142,33 @@ public class PedraPapelTesoura {
 
         // Line
         System.out.print("+");
-        printDashes(68);
+        printDashes(58);
         System.out.println("+");
 
         // Print titles
-        System.out.printf("|    %6s    |    %6s    |    %6s    |    %12s    |    %14s    |\n",
-                "Vitórias", "Derrotas", "Empates", "Partidas Jogadas", "Aproveitamento");
+        System.out.printf("| %6s | %6s | %6s | %12s | %14s |\n",
+                "V", "D", "E", "PJ", "APROV");
 
         // Line
         System.out.print("|");
-        printDashes(10);
+        printDashes(8);
         System.out.print("+");
-        printDashes(10);
+        printDashes(8);
         System.out.print("+");
-        printDashes(10);
+        printDashes(8);
+        System.out.print("+");
+        printDashes(14);
         System.out.print("+");
         printDashes(16);
-        System.out.print("+");
-        printDashes(18);
         System.out.println("|");
 
         // Print values
-        System.out.printf("|    %6d    |    %6d    |    %6d    |    %12d    |    %13.2f%%    |\n",
+        System.out.printf("| %6d | %6d | %6d | %12d | %13.2f%% |\n",
                 wins, losses, ties, numDePartidas, percentageWon * 100);
 
         // Line
         System.out.print("+");
-        printDashes(75);
+        printDashes(58);
         System.out.println("+");
     }
 
